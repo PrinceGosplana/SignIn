@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		9592904E267ADA0C00CDA88D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9592904C267ADA0C00CDA88D /* LaunchScreen.storyboard */; };
 		95929059267ADA0D00CDA88D /* SignInProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929058267ADA0D00CDA88D /* SignInProjectTests.swift */; };
 		95929064267ADA0D00CDA88D /* SignInProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929063267ADA0D00CDA88D /* SignInProjectUITests.swift */; };
+		95929073267ADD8C00CDA88D /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929072267ADD8C00CDA88D /* StoryboardBased.swift */; };
 		9F593DC17C20E00C477A7E0C /* Pods_SignInProject_SignInProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FB8E9A1DF34D757D4F667 /* Pods_SignInProject_SignInProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		9592905F267ADA0D00CDA88D /* SignInProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignInProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95929063267ADA0D00CDA88D /* SignInProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProjectUITests.swift; sourceTree = "<group>"; };
 		95929065267ADA0D00CDA88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95929072267ADD8C00CDA88D /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
 		A3B6966E3EE0B651E78BEE70 /* Pods-SignInProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-SignInProjectTests/Pods-SignInProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C1C3D6F0AFC99D94422C2A /* Pods-SignInProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProject.release.xcconfig"; path = "Target Support Files/Pods-SignInProject/Pods-SignInProject.release.xcconfig"; sourceTree = "<group>"; };
 		E75BF7671D4A086D9C95544B /* Pods_SignInProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignInProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +113,6 @@
 				A3B6966E3EE0B651E78BEE70 /* Pods-SignInProjectTests.debug.xcconfig */,
 				278D6FFF84F4D8707CEC4A9D /* Pods-SignInProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +141,7 @@
 		95929040267ADA0A00CDA88D /* SignInProject */ = {
 			isa = PBXGroup;
 			children = (
+				95929071267ADD3C00CDA88D /* Resources */,
 				95929041267ADA0A00CDA88D /* AppDelegate.swift */,
 				95929043267ADA0A00CDA88D /* SceneDelegate.swift */,
 				95929045267ADA0A00CDA88D /* ViewController.swift */,
@@ -167,6 +169,14 @@
 				95929065267ADA0D00CDA88D /* Info.plist */,
 			);
 			path = SignInProjectUITests;
+			sourceTree = "<group>";
+		};
+		95929071267ADD3C00CDA88D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				95929072267ADD8C00CDA88D /* StoryboardBased.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95929073267ADD8C00CDA88D /* StoryboardBased.swift in Sources */,
 				95929046267ADA0A00CDA88D /* ViewController.swift in Sources */,
 				95929042267ADA0A00CDA88D /* AppDelegate.swift in Sources */,
 				95929044267ADA0A00CDA88D /* SceneDelegate.swift in Sources */,

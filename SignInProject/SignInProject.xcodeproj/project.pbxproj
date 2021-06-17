@@ -24,6 +24,7 @@
 		95929086267AED3700CDA88D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929085267AED3700CDA88D /* AppCoordinator.swift */; };
 		9592908A267AFB0400CDA88D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929089267AFB0400CDA88D /* StartViewController.swift */; };
 		9592908C267AFB0F00CDA88D /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9592908B267AFB0F00CDA88D /* StartViewController.storyboard */; };
+		9592908F267BCD4F00CDA88D /* NetworkStateMaсhine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592908E267BCD4F00CDA88D /* NetworkStateMaсhine.swift */; };
 		9F593DC17C20E00C477A7E0C /* Pods_SignInProject_SignInProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FB8E9A1DF34D757D4F667 /* Pods_SignInProject_SignInProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		95929085267AED3700CDA88D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		95929089267AFB0400CDA88D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		9592908B267AFB0F00CDA88D /* StartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
+		9592908E267BCD4F00CDA88D /* NetworkStateMaсhine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkStateMaсhine.swift"; sourceTree = "<group>"; };
 		A3B6966E3EE0B651E78BEE70 /* Pods-SignInProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-SignInProjectTests/Pods-SignInProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C1C3D6F0AFC99D94422C2A /* Pods-SignInProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProject.release.xcconfig"; path = "Target Support Files/Pods-SignInProject/Pods-SignInProject.release.xcconfig"; sourceTree = "<group>"; };
 		E75BF7671D4A086D9C95544B /* Pods_SignInProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignInProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 		95929040267ADA0A00CDA88D /* SignInProject */ = {
 			isa = PBXGroup;
 			children = (
+				9592908D267BCD0000CDA88D /* Helpers */,
 				95929082267AECAA00CDA88D /* Coordinators */,
 				9592907F267AE57100CDA88D /* Protocols */,
 				95929076267AE33A00CDA88D /* ViewModels */,
@@ -219,6 +222,14 @@
 				95929085267AED3700CDA88D /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9592908D267BCD0000CDA88D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9592908E267BCD4F00CDA88D /* NetworkStateMaсhine.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +475,7 @@
 				95929086267AED3700CDA88D /* AppCoordinator.swift in Sources */,
 				95929075267ADF1500CDA88D /* BaseViewController.swift in Sources */,
 				9592908A267AFB0400CDA88D /* StartViewController.swift in Sources */,
+				9592908F267BCD4F00CDA88D /* NetworkStateMaсhine.swift in Sources */,
 				95929073267ADD8C00CDA88D /* StoryboardBased.swift in Sources */,
 				95929042267ADA0A00CDA88D /* AppDelegate.swift in Sources */,
 				9592907A267AE42D00CDA88D /* LogInViewModel.swift in Sources */,

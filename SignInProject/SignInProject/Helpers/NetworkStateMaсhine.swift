@@ -7,10 +7,10 @@
 
 import RxSwift
 
-final class x {
+final class NetworkStateMaсhine {
     
-    private var state: State = .connecting
-    public let stateChangedSubject = PublishSubject<State>()
+    public var state: State = .connecting
+    public var stateChangedSubject = PublishSubject<State>()
     
     enum State: String {
         case connectionError = "Connection error"
@@ -25,6 +25,8 @@ final class x {
         case .connectionError, .connectionEstablished:
             state = .connecting
         }
+        print(state)
+        stateChangedSubject.onNext(state)
     }
 
 }

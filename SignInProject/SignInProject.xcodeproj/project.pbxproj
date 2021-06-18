@@ -12,7 +12,6 @@
 		95929042267ADA0A00CDA88D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929041267ADA0A00CDA88D /* AppDelegate.swift */; };
 		9592904B267ADA0C00CDA88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9592904A267ADA0C00CDA88D /* Assets.xcassets */; };
 		9592904E267ADA0C00CDA88D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9592904C267ADA0C00CDA88D /* LaunchScreen.storyboard */; };
-		95929059267ADA0D00CDA88D /* SignInProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929058267ADA0D00CDA88D /* SignInProjectTests.swift */; };
 		95929064267ADA0D00CDA88D /* SignInProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929063267ADA0D00CDA88D /* SignInProjectUITests.swift */; };
 		95929073267ADD8C00CDA88D /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929072267ADD8C00CDA88D /* StoryboardBased.swift */; };
 		95929075267ADF1500CDA88D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929074267ADF1500CDA88D /* BaseViewController.swift */; };
@@ -25,6 +24,7 @@
 		9592908A267AFB0400CDA88D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929089267AFB0400CDA88D /* StartViewController.swift */; };
 		9592908C267AFB0F00CDA88D /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9592908B267AFB0F00CDA88D /* StartViewController.storyboard */; };
 		9592908F267BCD4F00CDA88D /* NetworkStateMaсhine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592908E267BCD4F00CDA88D /* NetworkStateMaсhine.swift */; };
+		95929091267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929090267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift */; };
 		9F593DC17C20E00C477A7E0C /* Pods_SignInProject_SignInProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FB8E9A1DF34D757D4F667 /* Pods_SignInProject_SignInProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,6 @@
 		9592904D267ADA0C00CDA88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9592904F267ADA0C00CDA88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95929054267ADA0D00CDA88D /* SignInProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignInProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95929058267ADA0D00CDA88D /* SignInProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProjectTests.swift; sourceTree = "<group>"; };
 		9592905A267ADA0D00CDA88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9592905F267ADA0D00CDA88D /* SignInProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignInProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95929063267ADA0D00CDA88D /* SignInProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProjectUITests.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		95929089267AFB0400CDA88D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		9592908B267AFB0F00CDA88D /* StartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		9592908E267BCD4F00CDA88D /* NetworkStateMaсhine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkStateMaсhine.swift"; sourceTree = "<group>"; };
+		95929090267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkStateMaсhineTest.swift"; sourceTree = "<group>"; };
 		A3B6966E3EE0B651E78BEE70 /* Pods-SignInProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-SignInProjectTests/Pods-SignInProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C1C3D6F0AFC99D94422C2A /* Pods-SignInProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProject.release.xcconfig"; path = "Target Support Files/Pods-SignInProject/Pods-SignInProject.release.xcconfig"; sourceTree = "<group>"; };
 		E75BF7671D4A086D9C95544B /* Pods_SignInProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignInProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,8 +173,8 @@
 		95929057267ADA0D00CDA88D /* SignInProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				95929058267ADA0D00CDA88D /* SignInProjectTests.swift */,
 				9592905A267ADA0D00CDA88D /* Info.plist */,
+				95929090267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift */,
 			);
 			path = SignInProjectTests;
 			sourceTree = "<group>";
@@ -488,7 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95929059267ADA0D00CDA88D /* SignInProjectTests.swift in Sources */,
+				95929091267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@ final class NetworkStateMaсhineTest: XCTestCase {
     
     private let disposeBag = DisposeBag()
     
-    func test_FromEmptyToAnotherState() {
+    func test_FromConnectingToAnotherState() {
         let sut = makeSUT()
         
         let currentState = sut.state
@@ -22,6 +22,18 @@ final class NetworkStateMaсhineTest: XCTestCase {
         
         let newState = sut.state
         XCTAssertNotEqual(currentState, newState)
+    }
+    
+    func test_FromConnectingToconnectingState() {
+        let sut = makeSUT()
+        
+        let connectingState = sut.state
+        sut.transition()
+        
+        sut.transition()
+        let connectingStateTo = sut.state
+        
+        XCTAssertEqual(connectingState, connectingStateTo)
     }
     
     // Helpers

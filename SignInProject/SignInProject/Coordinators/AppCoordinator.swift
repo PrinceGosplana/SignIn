@@ -25,11 +25,32 @@ class AppCoordinator: BaseCoordinator<Void> {
     private func presentLoginScreen() {
         let viewModel = LogInViewModel()
         let viewController = StartViewController.instantiate(with: viewModel)
+        
+        viewModel.navigationForwardSubject.subscribe(onNext: { [weak self] _ in
+            self?.presentSignUpScreen()
+        }).disposed(by: disposeBag)
+        
         navigationController.viewControllers = [viewController]
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
     
-    private func presentSignUpScreen() { }
-    private func presentForgotPasswordScreen() { }
+    private func presentSignUpScreen() {
+        let viewModel = SignUpViewModel()
+        let viewController = StartViewController.instantiate(with: viewModel)
+        
+        viewModel.navigationForwardSubject.subscribe(onNext: { [weak self] _ in
+            self?.presentForgotPasswordScreen()
+        }).disposed(by: disposeBag)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func presentForgotPasswordScreen() {
+        let viewModel = ForgotPasswordViewModel()
+        let viewController = StartViewController.instantiate(with: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
 }

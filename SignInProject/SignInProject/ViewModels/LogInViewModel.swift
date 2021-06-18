@@ -9,7 +9,8 @@ import Foundation
 import RxSwift
 
 final class LogInViewModel {
-    public let confirmedSubject = PublishSubject<Void>()
+    public let navigationForwardSubject = PublishSubject<Void>()
+    public let showIDsSubject = PublishSubject<Void>()
 }
 
 extension LogInViewModel: LoginSettings {
@@ -17,10 +18,10 @@ extension LogInViewModel: LoginSettings {
     var subButtonTitle: String { "Emit IDs" }
 
     func mainTapAction() {
-        confirmedSubject.onNext(())
+        navigationForwardSubject.onNext(())
     }
     
     func subTapAction() {
-        confirmedSubject.onNext(())
+        showIDsSubject.onNext(())
     }
 }

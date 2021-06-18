@@ -12,7 +12,6 @@ class BaseCoordinator<ResultType> {
     
     typealias CoordinationResult = ResultType
     
-  
     public let disposeBag = DisposeBag()
     private let identifier = UUID()
     private var childCoordinators = [UUID: Any]()

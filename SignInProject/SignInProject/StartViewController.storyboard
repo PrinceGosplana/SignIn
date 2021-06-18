@@ -22,11 +22,15 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfj-VC-Aw6">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="navigationForward" destination="Y6W-OH-hqX" eventType="touchUpInside" id="y4K-Vi-pxE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfr-q7-yhf">
                                         <rect key="frame" x="0.0" y="30" width="374" height="50"/>
-                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="showIDsAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FdR-jM-CsQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -42,6 +46,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lF7-LP-0Fd" secondAttribute="trailing" constant="20" id="xeB-GH-QWu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="navigationButton" destination="Zfj-VC-Aw6" id="kBV-NN-INT"/>
+                        <outlet property="optionalButton" destination="yfr-q7-yhf" id="mng-hk-a9f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

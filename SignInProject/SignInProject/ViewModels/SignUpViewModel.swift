@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 final class SignUpViewModel {
-    public let confirmedSubject = PublishSubject<Void>()
+    public let navigationForwardSubject = PublishSubject<Void>()
 }
 
 extension SignUpViewModel: LoginSettings {
@@ -17,10 +17,8 @@ extension SignUpViewModel: LoginSettings {
     var subButtonTitle: String { "" }
 
     func mainTapAction() {
-        confirmedSubject.onNext(())
+        navigationForwardSubject.onNext(())
     }
     
-    func subTapAction() {
-        confirmedSubject.onNext(())
-    }
+    func subTapAction() { }
 }

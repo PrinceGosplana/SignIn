@@ -25,7 +25,6 @@ final class NetworkStateMaсhine {
         case .connectionError, .connectionEstablished:
             state = .connecting
         }
-        print(state)
         stateChangedSubject.onNext(state)
     }
 

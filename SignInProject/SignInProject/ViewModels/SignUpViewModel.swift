@@ -37,7 +37,6 @@ final class SignUpViewModel {
 
 extension SignUpViewModel: LoginSettings {
     var mainButtonTitle: String { "Sign Up" }
-    var subButtonTitle: String { "" }
     
     func mainTapAction() {
         navigationForwardSubject.onNext(())

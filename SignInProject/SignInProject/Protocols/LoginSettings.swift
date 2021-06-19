@@ -19,6 +19,7 @@ protocol LoginSettings {
 }
 
 extension LoginSettings {
+    var subButtonTitle: String { "" }
     func mainTapAction() {}
     func subTapAction() {}
 }

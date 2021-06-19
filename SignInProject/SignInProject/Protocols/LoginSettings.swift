@@ -15,6 +15,7 @@ protocol LoginSettings {
     var timeBasedModel: TimeBasedModel { get }
     func mainTapAction()
     func subTapAction()
+    func startTimer()
 }
 
 protocol BackActionProtocol {

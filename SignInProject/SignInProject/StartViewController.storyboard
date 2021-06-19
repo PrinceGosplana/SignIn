@@ -38,7 +38,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rHE-w5-nit" customClass="PopUpView" customModule="SignInProject" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="-50" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jeV-zp-F4b"/>
@@ -50,7 +50,7 @@
                         <constraints>
                             <constraint firstItem="lF7-LP-0Fd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="4g2-gN-khy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rHE-w5-nit" secondAttribute="trailing" id="Fo3-5p-aW9"/>
-                            <constraint firstItem="rHE-w5-nit" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="50" id="WVK-ql-L2Z"/>
+                            <constraint firstItem="rHE-w5-nit" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-50" id="WVK-ql-L2Z"/>
                             <constraint firstItem="lF7-LP-0Fd" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="e1n-bH-mJa"/>
                             <constraint firstItem="rHE-w5-nit" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="juY-MS-3Fb"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lF7-LP-0Fd" secondAttribute="trailing" constant="20" id="xeB-GH-QWu"/>

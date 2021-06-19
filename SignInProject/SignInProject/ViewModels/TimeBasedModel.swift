@@ -15,11 +15,11 @@ class TimeBasedModel {
     
     init(_ delay: Double = 5.0) {
         self.delay = delay
-        startTimer()
     }
     
     private func invalidateTimer() {
         timer?.invalidate()
+        timer = nil
     }
     
     public func stopTimer() {

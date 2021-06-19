@@ -26,13 +26,12 @@ class StartViewController: BaseViewController, StoryboardBased, ViewModelBased {
         viewModel?.subTapAction()
     }
 
+    
     override func setupUI() {
         guard let viewModel = viewModel else { return  }
         navigationButton.setTitle(viewModel.mainButtonTitle, for: .normal)
         optionalButton.setTitle(viewModel.subButtonTitle, for: .normal)
         optionalButton.isHidden = viewModel.subButtonTitle.isEmpty
-        
-        popUpView.alpha = 0.0
         
         if let _ = viewModel as? BackActionProtocol {
             let back = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backAction))
@@ -50,23 +49,23 @@ class StartViewController: BaseViewController, StoryboardBased, ViewModelBased {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel?.startTimer()
+    }
+    
     private func showPopUp() {
-        let moveTransform = popUpView.transform.translatedBy(x: 0.0, y: 50.0)
         UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 5, options: .curveEaseInOut,  animations: { [weak self] in
-            self?.popUpView.alpha = 1.0
-            self?.popUpView.transform = moveTransform
+            self?.popUpView.transform = CGAffineTransform(translationX: 0, y: 150)
         }) { _ in
             self.hidePopUp()
         }
     }
     
     private func hidePopUp() {
-        let moveTransform = popUpView.transform.translatedBy(x: 0.0, y: -50.0)
         UIView.animate(withDuration: 0.4, delay: 0.7, animations: { [weak self] in
-            self?.popUpView.transform = moveTransform
-        }) { _ in
-            self.popUpView.alpha = 0.0
-        }
+            self?.popUpView.transform = .identity
+        })
     }
     
     @objc private func backAction() {

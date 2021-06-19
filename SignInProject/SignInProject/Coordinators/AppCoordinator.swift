@@ -40,10 +40,13 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     private func presentSignUpScreen() {
-        let viewModel = SignUpViewModel()
+        let timeBasedModel = TimeBasedModel()
+        let networkStateMachine = NetworkStateMaсhine()
+        let viewModel = SignUpViewModel(timeBasedModel: timeBasedModel, networkStateMachine: networkStateMachine)
         let viewController = StartViewController.instantiate(with: viewModel)
         
         viewModel.navigationForwardSubject.subscribe(onNext: { [weak self] _ in
+            timeBasedModel.stopTimer()
             self?.presentForgotPasswordScreen()
         }).disposed(by: disposeBag)
         
@@ -55,10 +58,13 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     private func presentForgotPasswordScreen() {
-        let viewModel = ForgotPasswordViewModel()
+        let timeBasedModel = TimeBasedModel()
+        let networkStateMachine = NetworkStateMaсhine()
+        let viewModel = ForgotPasswordViewModel(timeBasedModel: timeBasedModel, networkStateMachine: networkStateMachine)
         let viewController = StartViewController.instantiate(with: viewModel)
         
         viewModel.navigationBackSubject.subscribe(onNext: { [weak self] _ in
+            timeBasedModel.stopTimer()
             self?.navigationController.popViewController(animated: true)
         }).disposed(by: disposeBag)
         

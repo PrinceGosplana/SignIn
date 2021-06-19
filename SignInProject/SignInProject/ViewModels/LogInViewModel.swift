@@ -31,7 +31,9 @@ final class LogInViewModel {
         }).disposed(by: disposeBag)
     }
     
-    
+    func startTimer() {
+        timeBasedModel.startTimer()
+    }
 }
 
 extension LogInViewModel: LoginSettings {

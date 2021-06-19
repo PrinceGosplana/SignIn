@@ -42,8 +42,6 @@ extension SignUpViewModel: LoginSettings {
     func mainTapAction() {
         navigationForwardSubject.onNext(())
     }
-    
-    func subTapAction() { }
 }
 
 extension SignUpViewModel: BackActionProtocol {

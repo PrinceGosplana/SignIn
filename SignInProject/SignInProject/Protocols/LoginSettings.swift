@@ -13,9 +13,14 @@ protocol LoginSettings {
     var mainButtonTitle: String { get }
     var subButtonTitle: String { get }
     var timeBasedModel: TimeBasedModel { get }
-    func mainTapAction()
     func subTapAction()
+    func mainTapAction()
     func startTimer()
+}
+
+extension LoginSettings {
+    func mainTapAction() {}
+    func subTapAction() {}
 }
 
 protocol BackActionProtocol {

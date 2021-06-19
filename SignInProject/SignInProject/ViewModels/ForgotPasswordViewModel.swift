@@ -37,9 +37,6 @@ final class ForgotPasswordViewModel {
 extension ForgotPasswordViewModel: LoginSettings {
     var mainButtonTitle: String { "Forgot Password" }
     var subButtonTitle: String { "" }
-    
-    func mainTapAction() { }
-    func subTapAction() { }
 }
 
 extension ForgotPasswordViewModel: BackActionProtocol {

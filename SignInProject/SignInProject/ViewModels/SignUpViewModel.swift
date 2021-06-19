@@ -10,6 +10,8 @@ import RxSwift
 
 final class SignUpViewModel {
     public let navigationForwardSubject = PublishSubject<Void>()
+    public var emitNetworkState = PublishSubject<NetworkStateMaсhine.State>()
+    var timeBasedModel = TimeBasedModel()
 }
 
 extension SignUpViewModel: LoginSettings {

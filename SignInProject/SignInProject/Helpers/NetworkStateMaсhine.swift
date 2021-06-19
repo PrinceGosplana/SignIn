@@ -18,7 +18,7 @@ final class NetworkStateMaсhine {
         case connectionEstablished = "Connection established"
     }
     
-    public func transition() {
+    public func transitionToNextState() {
         switch state {
         case .connecting:
             state = arc4random_uniform(2) == 0 ? .connectionError : .connectionEstablished

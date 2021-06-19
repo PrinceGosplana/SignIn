@@ -23,7 +23,7 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     private func presentLoginScreen() {
-        let viewModel = LogInViewModel()
+        let viewModel = LogInViewModel(timeBasedModel: TimeBasedModel(), networkStateMachine: NetworkStateMaсhine())
         let viewController = StartViewController.instantiate(with: viewModel)
         
         viewModel.navigationForwardSubject.subscribe(onNext: { [weak self] _ in

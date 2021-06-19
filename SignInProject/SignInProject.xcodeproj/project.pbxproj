@@ -25,6 +25,10 @@
 		9592908C267AFB0F00CDA88D /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9592908B267AFB0F00CDA88D /* StartViewController.storyboard */; };
 		9592908F267BCD4F00CDA88D /* NetworkStateMaсhine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592908E267BCD4F00CDA88D /* NetworkStateMaсhine.swift */; };
 		95929091267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929090267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift */; };
+		95929093267C53A800CDA88D /* TimeBasedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929092267C53A800CDA88D /* TimeBasedModel.swift */; };
+		95929096267D0D9D00CDA88D /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95929095267D0D9D00CDA88D /* PopUpView.xib */; };
+		95929098267D0DB900CDA88D /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95929097267D0DB900CDA88D /* PopUpView.swift */; };
+		9592909B267D121000CDA88D /* UIView+Exension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9592909A267D121000CDA88D /* UIView+Exension.swift */; };
 		9F593DC17C20E00C477A7E0C /* Pods_SignInProject_SignInProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FB8E9A1DF34D757D4F667 /* Pods_SignInProject_SignInProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +78,10 @@
 		9592908B267AFB0F00CDA88D /* StartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		9592908E267BCD4F00CDA88D /* NetworkStateMaсhine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkStateMaсhine.swift"; sourceTree = "<group>"; };
 		95929090267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkStateMaсhineTest.swift"; sourceTree = "<group>"; };
+		95929092267C53A800CDA88D /* TimeBasedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBasedModel.swift; sourceTree = "<group>"; };
+		95929095267D0D9D00CDA88D /* PopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
+		95929097267D0DB900CDA88D /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
+		9592909A267D121000CDA88D /* UIView+Exension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Exension.swift"; sourceTree = "<group>"; };
 		A3B6966E3EE0B651E78BEE70 /* Pods-SignInProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-SignInProjectTests/Pods-SignInProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C1C3D6F0AFC99D94422C2A /* Pods-SignInProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProject.release.xcconfig"; path = "Target Support Files/Pods-SignInProject/Pods-SignInProject.release.xcconfig"; sourceTree = "<group>"; };
 		E75BF7671D4A086D9C95544B /* Pods_SignInProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignInProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +163,8 @@
 		95929040267ADA0A00CDA88D /* SignInProject */ = {
 			isa = PBXGroup;
 			children = (
+				95929099267D11FF00CDA88D /* Extensions */,
+				95929094267D0D7C00CDA88D /* Custom Views */,
 				9592908D267BCD0000CDA88D /* Helpers */,
 				95929082267AECAA00CDA88D /* Coordinators */,
 				9592907F267AE57100CDA88D /* Protocols */,
@@ -202,6 +212,7 @@
 				95929079267AE42D00CDA88D /* LogInViewModel.swift */,
 				9592907B267AE43E00CDA88D /* SignUpViewModel.swift */,
 				9592907D267AE45700CDA88D /* ForgotPasswordViewModel.swift */,
+				95929092267C53A800CDA88D /* TimeBasedModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -230,6 +241,23 @@
 				9592908E267BCD4F00CDA88D /* NetworkStateMaсhine.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		95929094267D0D7C00CDA88D /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				95929095267D0D9D00CDA88D /* PopUpView.xib */,
+				95929097267D0DB900CDA88D /* PopUpView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		95929099267D11FF00CDA88D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9592909A267D121000CDA88D /* UIView+Exension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9592904E267ADA0C00CDA88D /* LaunchScreen.storyboard in Resources */,
+				95929096267D0D9D00CDA88D /* PopUpView.xib in Resources */,
 				9592904B267ADA0C00CDA88D /* Assets.xcassets in Resources */,
 				9592908C267AFB0F00CDA88D /* StartViewController.storyboard in Resources */,
 			);
@@ -471,11 +500,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9592907E267AE45700CDA88D /* ForgotPasswordViewModel.swift in Sources */,
+				95929098267D0DB900CDA88D /* PopUpView.swift in Sources */,
 				95929084267AECCB00CDA88D /* BaseCoordinator.swift in Sources */,
+				9592909B267D121000CDA88D /* UIView+Exension.swift in Sources */,
 				95929086267AED3700CDA88D /* AppCoordinator.swift in Sources */,
 				95929075267ADF1500CDA88D /* BaseViewController.swift in Sources */,
 				9592908A267AFB0400CDA88D /* StartViewController.swift in Sources */,
 				9592908F267BCD4F00CDA88D /* NetworkStateMaсhine.swift in Sources */,
+				95929093267C53A800CDA88D /* TimeBasedModel.swift in Sources */,
 				95929073267ADD8C00CDA88D /* StoryboardBased.swift in Sources */,
 				95929042267ADA0A00CDA88D /* AppDelegate.swift in Sources */,
 				9592907A267AE42D00CDA88D /* LogInViewModel.swift in Sources */,

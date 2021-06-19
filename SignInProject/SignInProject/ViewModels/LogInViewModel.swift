@@ -31,6 +31,7 @@ final class LogInViewModel {
         }).disposed(by: disposeBag)
     }
     
+    
 }
 
 extension LogInViewModel: LoginSettings {
@@ -44,6 +45,5 @@ extension LogInViewModel: LoginSettings {
     
     func subTapAction() {
         showIDsSubject.onNext(())
-        
     }
 }

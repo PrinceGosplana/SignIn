@@ -16,3 +16,7 @@ protocol LoginSettings {
     func mainTapAction()
     func subTapAction()
 }
+
+protocol BackActionProtocol {
+    func backPressed()
+}

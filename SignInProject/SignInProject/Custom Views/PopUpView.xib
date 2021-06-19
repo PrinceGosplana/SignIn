@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4he-iz-xbB" userLabel="Back view">
-                    <rect key="frame" x="50" y="10" width="314" height="98"/>
+                    <rect key="frame" x="171.5" y="10" width="71.5" height="98"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="on8-Rn-vc4">
-                    <rect key="frame" x="50" y="10" width="314" height="98"/>
+                    <rect key="frame" x="186.5" y="10" width="41.5" height="98"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -34,12 +34,11 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="4he-iz-xbB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="6We-OH-J2H"/>
                 <constraint firstItem="on8-Rn-vc4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="BGI-fB-1Bc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="4he-iz-xbB" secondAttribute="bottom" constant="10" id="JaP-1w-m5k"/>
-                <constraint firstItem="on8-Rn-vc4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="NNw-Xc-tBj"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="on8-Rn-vc4" secondAttribute="trailing" constant="50" id="Tam-Cm-AsX"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4he-iz-xbB" secondAttribute="trailing" constant="50" id="XbF-1z-huO"/>
+                <constraint firstItem="on8-Rn-vc4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="R5w-xM-Nmg"/>
+                <constraint firstItem="on8-Rn-vc4" firstAttribute="leading" secondItem="4he-iz-xbB" secondAttribute="leading" constant="15" id="dzE-4o-z4y"/>
+                <constraint firstItem="on8-Rn-vc4" firstAttribute="trailing" secondItem="4he-iz-xbB" secondAttribute="trailing" constant="-15" id="nfS-xA-pPk"/>
                 <constraint firstItem="4he-iz-xbB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="pWp-Vp-IT4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="on8-Rn-vc4" secondAttribute="bottom" constant="10" id="zH1-HN-vUJ"/>
             </constraints>

@@ -11,7 +11,7 @@ import RxSwift
 class TimeBasedModel {
     private var delay: Double
     private var timer: Timer?
-    public var timerSubject = PublishSubject<Void>()
+    public var timerSubject = PublishSubject<Int>()
     
     init(_ delay: Double = 5.0) {
         self.delay = delay
@@ -34,7 +34,7 @@ class TimeBasedModel {
                 timer.invalidate()
                 return
             }
-            self.timerSubject.onNext(())
+            self.timerSubject.onNext((Int(self.delay)))
         }
     }
 }

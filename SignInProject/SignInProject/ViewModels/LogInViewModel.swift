@@ -17,11 +17,11 @@ final class LogInViewModel {
     public var timeBasedModel: TimeBasedModel
     private let networkStateMachine: NetworkStateMaсhine
     private let disposeBag = DisposeBag()
+    private let arrayOfIDs =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     
     init(timeBasedModel: TimeBasedModel, networkStateMachine: NetworkStateMaсhine) {
         self.timeBasedModel = timeBasedModel
         self.networkStateMachine = networkStateMachine
-        
         self.timeBasedModel.timerSubject.subscribe(onNext: { [weak self] _ in
             self?.networkStateMachine.transitionToNextState()
         }).disposed(by: disposeBag)
@@ -29,10 +29,24 @@ final class LogInViewModel {
         self.networkStateMachine.stateChangedSubject.subscribe(onNext: { [weak self] state in
             self?.emitNetworkState.onNext(state)
         }).disposed(by: disposeBag)
+        
     }
     
     func startTimer() {
         timeBasedModel.startTimer()
+    }
+    
+    func subTapAction() {
+        performWith(0, array: arrayOfIDs)
+    }
+    
+    private func performWith(_ index: Int, array: [Int]) {
+        if index < array.count {
+                        Timer.scheduledTimer(withTimeInterval: Double(array[index]), repeats: false) { [weak self] timer in
+                            print("Prints its ID = \(array[index]) to the console at the end of the execution")
+                            self?.performWith(index , array: array)
+                        }
+        }
     }
 }
 
@@ -45,7 +59,4 @@ extension LogInViewModel: LoginSettings {
         navigationForwardSubject.onNext(())
     }
     
-    func subTapAction() {
-        showIDsSubject.onNext(())
-    }
 }

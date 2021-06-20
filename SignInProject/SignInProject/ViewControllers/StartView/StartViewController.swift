@@ -8,6 +8,18 @@
 import UIKit
 import RxSwift
 
+extension Double {
+    static let animationDelay: Double = 0.4
+    static let hideAnimationDelay: Double = 0.7
+    
+}
+
+extension CGFloat {
+    static let yOffset: CGFloat = 150.0
+    static let springWithDamping: CGFloat = 0.6
+    static let springVelocity: CGFloat = 5.0
+}
+
 class StartViewController: BaseViewController, StoryboardBased, ViewModelBased {
     
     typealias ViewModel = LoginSettings
@@ -25,7 +37,6 @@ class StartViewController: BaseViewController, StoryboardBased, ViewModelBased {
     @IBAction func showIDsAction() {
         viewModel?.subTapAction()
     }
-
     
     override func setupUI() {
         guard let viewModel = viewModel else { return  }
@@ -55,15 +66,15 @@ class StartViewController: BaseViewController, StoryboardBased, ViewModelBased {
     }
     
     private func showPopUp() {
-        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 5, options: .curveEaseInOut,  animations: { [weak self] in
-            self?.popUpView.transform = CGAffineTransform(translationX: 0, y: 150)
+        UIView.animate(withDuration: .animationDelay, delay: 0, usingSpringWithDamping: .springWithDamping, initialSpringVelocity: .springVelocity, options: .curveEaseInOut,  animations: { [weak self] in
+            self?.popUpView.transform = CGAffineTransform(translationX: 0, y: .yOffset)
         }) { _ in
             self.hidePopUp()
         }
     }
     
     private func hidePopUp() {
-        UIView.animate(withDuration: 0.4, delay: 0.7, animations: { [weak self] in
+        UIView.animate(withDuration: .animationDelay, delay: .hideAnimationDelay, animations: { [weak self] in
             self?.popUpView.transform = .identity
         })
     }

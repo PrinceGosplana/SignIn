@@ -39,8 +39,15 @@ final class LogInViewModel {
     }
     
     func subTapAction() {
-        messageSentSubject.onNext(())
+        checkNetworkStateAndTrySendingMessage()
+        
+        invalidateIDsTimer()
         performWith(0, array: arrayOfIDs)
+    }
+    
+    func mainTapAction() {
+        invalidateIDsTimer()
+        navigationForwardSubject.onNext(())
     }
     
     private func performWith(_ index: Int, array: [Int]) {
@@ -52,10 +59,17 @@ final class LogInViewModel {
         }
     }
     
-    func mainTapAction() {
-        timerIDs?.invalidate()
-        timerIDs = nil
-        navigationForwardSubject.onNext(())
+    private func checkNetworkStateAndTrySendingMessage() {
+        if networkStateMachine.state == .connectionEstablished {
+            messageSentSubject.onNext(())
+        }
+    }
+    
+    private func invalidateIDsTimer() {
+        if timerIDs != nil {
+            timerIDs?.invalidate()
+            timerIDs = nil
+        }
     }
 }
 

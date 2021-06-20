@@ -18,7 +18,7 @@ final class NetworkStateMaсhineTest: XCTestCase {
         let sut = makeSUT()
         
         let currentState = sut.state
-        sut.transition()
+        sut.transitionToNextState()
         
         let newState = sut.state
         XCTAssertNotEqual(currentState, newState)
@@ -28,9 +28,9 @@ final class NetworkStateMaсhineTest: XCTestCase {
         let sut = makeSUT()
         
         let connectingState = sut.state
-        sut.transition()
+        sut.transitionToNextState()
         
-        sut.transition()
+        sut.transitionToNextState()
         let connectingStateTo = sut.state
         
         XCTAssertEqual(connectingState, connectingStateTo)

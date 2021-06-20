@@ -33,6 +33,7 @@
 		959290A0267EED4500CDA88D /* MessageSentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9592909F267EED4500CDA88D /* MessageSentViewController.storyboard */; };
 		959290A4267EEDD900CDA88D /* MessageSentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959290A3267EEDD900CDA88D /* MessageSentViewModel.swift */; };
 		959290A6267F05B200CDA88D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959290A5267F05B200CDA88D /* Constants.swift */; };
+		959290A8267F08EF00CDA88D /* StateRendererTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959290A7267F08EF00CDA88D /* StateRendererTest.swift */; };
 		9F593DC17C20E00C477A7E0C /* Pods_SignInProject_SignInProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FB8E9A1DF34D757D4F667 /* Pods_SignInProject_SignInProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		9592909F267EED4500CDA88D /* MessageSentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MessageSentViewController.storyboard; sourceTree = "<group>"; };
 		959290A3267EEDD900CDA88D /* MessageSentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSentViewModel.swift; sourceTree = "<group>"; };
 		959290A5267F05B200CDA88D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		959290A7267F08EF00CDA88D /* StateRendererTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRendererTest.swift; sourceTree = "<group>"; };
 		A3B6966E3EE0B651E78BEE70 /* Pods-SignInProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-SignInProjectTests/Pods-SignInProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C1C3D6F0AFC99D94422C2A /* Pods-SignInProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProject.release.xcconfig"; path = "Target Support Files/Pods-SignInProject/Pods-SignInProject.release.xcconfig"; sourceTree = "<group>"; };
 		E75BF7671D4A086D9C95544B /* Pods_SignInProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignInProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,7 @@
 			children = (
 				9592905A267ADA0D00CDA88D /* Info.plist */,
 				95929090267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift */,
+				959290A7267F08EF00CDA88D /* StateRendererTest.swift */,
 			);
 			path = SignInProjectTests;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959290A8267F08EF00CDA88D /* StateRendererTest.swift in Sources */,
 				95929091267BD1DC00CDA88D /* NetworkStateMaсhineTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

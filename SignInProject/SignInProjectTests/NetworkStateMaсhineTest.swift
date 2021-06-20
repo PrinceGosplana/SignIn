@@ -7,12 +7,9 @@
 
 import Foundation
 import XCTest
-import RxSwift
 @testable import SignInProject
 
 final class NetworkStateMaсhineTest: XCTestCase {
-    
-    private let disposeBag = DisposeBag()
     
     func test_FromConnectingToAnotherState() {
         let sut = makeSUT()

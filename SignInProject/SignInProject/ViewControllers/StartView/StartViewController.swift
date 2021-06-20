@@ -26,9 +26,11 @@ class StartViewController: MVVMViewController {
     var viewModel: ViewModel?
     private let disposeBag = DisposeBag()
     
+    public var networkState = NetworkStateMaсhine.State.connecting
+    
     @IBOutlet private var navigationButton: UIButton!
     @IBOutlet private var optionalButton: UIButton!
-    @IBOutlet private var popUpView: PopUpView!
+    @IBOutlet private weak var popUpView: PopUpView?
     
     @IBAction func navigationForward() {
         viewModel?.mainTapAction()
@@ -54,8 +56,10 @@ class StartViewController: MVVMViewController {
         guard let viewModel = viewModel else { return  }
         
         viewModel.emitNetworkState.subscribe(onNext: { [weak self] state in
-            self?.popUpView.networkState = state
-            self?.showPopUp()
+            guard let self = self else { return }
+            self.networkState = state
+            self.popUpView?.networkState = self.networkState
+            self.showPopUp()
         }).disposed(by: disposeBag)
 
     }
@@ -67,7 +71,7 @@ class StartViewController: MVVMViewController {
     
     private func showPopUp() {
         UIView.animate(withDuration: .animationDelay, delay: 0, usingSpringWithDamping: .springWithDamping, initialSpringVelocity: .springVelocity, options: .curveEaseInOut,  animations: { [weak self] in
-            self?.popUpView.transform = CGAffineTransform(translationX: 0, y: .yOffset)
+            self?.popUpView?.transform = CGAffineTransform(translationX: 0, y: .yOffset)
         }) { _ in
             self.hidePopUp()
         }
@@ -75,7 +79,7 @@ class StartViewController: MVVMViewController {
     
     private func hidePopUp() {
         UIView.animate(withDuration: .animationDelay, delay: .hideAnimationDelay, animations: { [weak self] in
-            self?.popUpView.transform = .identity
+            self?.popUpView?.transform = .identity
         })
     }
     

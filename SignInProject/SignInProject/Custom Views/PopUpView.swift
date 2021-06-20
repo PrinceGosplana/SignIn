@@ -15,20 +15,27 @@ private extension CGFloat {
 
 final class PopUpView: UIView {
     
+    private var networkState: NetworkStateMaсhine.State?
+    
     @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var backView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         customInit()
     }
         
-    var networkState: NetworkStateMaсhine.State = .connecting {
-        didSet {
-            updateState()
-        }
+    public func updateWithState(_ state: NetworkStateMaсhine.State) {
+        networkState = state
+        updateState()
     }
+//    var networkState: NetworkStateMaсhine.State = .connecting {
+//        didSet {
+//            updateState()
+//        }
+//    }
     
     // MARK: - Private functions
     
@@ -54,7 +61,9 @@ final class PopUpView: UIView {
             backView.backgroundColor = .systemRed
         case .connectionEstablished:
             backView.backgroundColor = .systemGreen
+        case .none:
+            backView.backgroundColor = .clear
         }
-        titleLabel.text = networkState.rawValue
+        titleLabel.text = networkState?.rawValue ?? ""
     }
 }

@@ -11,7 +11,6 @@ import RxSwift
 extension Double {
     static let animationDelay: Double = 0.4
     static let hideAnimationDelay: Double = 0.7
-    
 }
 
 extension CGFloat {
@@ -58,7 +57,7 @@ class StartViewController: MVVMViewController {
         viewModel.emitNetworkState.subscribe(onNext: { [weak self] state in
             guard let self = self else { return }
             self.networkState = state
-            self.popUpView?.networkState = self.networkState
+            self.popUpView?.updateWithState(self.networkState)
             self.showPopUp()
         }).disposed(by: disposeBag)
 

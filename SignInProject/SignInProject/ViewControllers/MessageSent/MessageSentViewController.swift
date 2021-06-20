@@ -48,5 +48,13 @@ class MessageSentViewController: BaseViewController, StoryboardBased, ViewModelB
             .subscribe(onNext: { [weak self] _ in
                 self?.viewModel?.dismissMessage()
             }).disposed(by: disposeBag)
+        
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(dismissController))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func dismissController() {
+        viewModel?.dismissMessage()
     }
 }

@@ -24,6 +24,3 @@ extension LoginSettings {
     func subTapAction() {}
 }
 
-protocol BackActionProtocol {
-    func backPressed()
-}

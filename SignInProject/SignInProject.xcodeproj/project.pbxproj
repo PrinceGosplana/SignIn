@@ -34,6 +34,7 @@
 		959290A4267EEDD900CDA88D /* MessageSentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959290A3267EEDD900CDA88D /* MessageSentViewModel.swift */; };
 		959290A6267F05B200CDA88D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959290A5267F05B200CDA88D /* Constants.swift */; };
 		959290A8267F08EF00CDA88D /* StateRendererTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959290A7267F08EF00CDA88D /* StateRendererTest.swift */; };
+		959290AA267F6AD600CDA88D /* BackActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959290A9267F6AD600CDA88D /* BackActionProtocol.swift */; };
 		9F593DC17C20E00C477A7E0C /* Pods_SignInProject_SignInProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FB8E9A1DF34D757D4F667 /* Pods_SignInProject_SignInProjectUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		959290A3267EEDD900CDA88D /* MessageSentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSentViewModel.swift; sourceTree = "<group>"; };
 		959290A5267F05B200CDA88D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		959290A7267F08EF00CDA88D /* StateRendererTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRendererTest.swift; sourceTree = "<group>"; };
+		959290A9267F6AD600CDA88D /* BackActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackActionProtocol.swift; sourceTree = "<group>"; };
 		A3B6966E3EE0B651E78BEE70 /* Pods-SignInProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-SignInProjectTests/Pods-SignInProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3C1C3D6F0AFC99D94422C2A /* Pods-SignInProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignInProject.release.xcconfig"; path = "Target Support Files/Pods-SignInProject/Pods-SignInProject.release.xcconfig"; sourceTree = "<group>"; };
 		E75BF7671D4A086D9C95544B /* Pods_SignInProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignInProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +233,7 @@
 			children = (
 				95929072267ADD8C00CDA88D /* StoryboardBased.swift */,
 				95929080267AE60E00CDA88D /* LoginSettings.swift */,
+				959290A9267F6AD600CDA88D /* BackActionProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959290AA267F6AD600CDA88D /* BackActionProtocol.swift in Sources */,
 				959290A4267EEDD900CDA88D /* MessageSentViewModel.swift in Sources */,
 				959290A6267F05B200CDA88D /* Constants.swift in Sources */,
 				9592907E267AE45700CDA88D /* ForgotPasswordViewModel.swift in Sources */,

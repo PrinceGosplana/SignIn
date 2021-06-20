@@ -11,10 +11,11 @@ import RxSwift
 final class LogInViewModel {
     
     public let navigationForwardSubject = PublishSubject<Void>()
+    public let messageSentSubject = PublishSubject<Void>()
     public var emitNetworkState = PublishSubject<NetworkStateMaсhine.State>()
     public let showIDsSubject = PublishSubject<Void>()
-    
     public var timeBasedModel: TimeBasedModel
+    
     private let networkStateMachine: NetworkStateMaсhine
     private let disposeBag = DisposeBag()
     private let arrayOfIDs =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -38,6 +39,7 @@ final class LogInViewModel {
     }
     
     func subTapAction() {
+        messageSentSubject.onNext(())
         performWith(0, array: arrayOfIDs)
     }
     

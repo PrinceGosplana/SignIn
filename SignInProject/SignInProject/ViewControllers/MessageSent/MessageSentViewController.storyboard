@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,54 +17,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-g3-VRp">
-                                <rect key="frame" x="87" y="378" width="240" height="140"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jpu-OW-Udi">
-                                    <rect key="frame" x="0.0" y="0.0" width="240" height="140"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uX3-py-KDZ">
-                                            <rect key="frame" x="20" y="20" width="200" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vG1-73-FNK">
+                                <rect key="frame" x="87" y="388" width="240" height="120"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-g3-VRp">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Jpu-OW-Udi">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3A-UD-m9v">
-                                                    <rect key="frame" x="79.5" y="0.0" width="41.5" height="40"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwM-dF-pv4">
-                                                    <rect key="frame" x="0.0" y="60" width="200" height="40"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uX3-py-KDZ">
+                                                    <rect key="frame" x="20" y="20" width="200" height="80"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3A-UD-m9v">
+                                                            <rect key="frame" x="79.5" y="0.0" width="41.5" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwM-dF-pv4">
+                                                            <rect key="frame" x="0.0" y="50" width="200" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="XFA-4M-USG"/>
+                                                            </constraints>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="TwM-dF-pv4" secondAttribute="trailing" id="QKB-JL-Mou"/>
+                                                        <constraint firstItem="TwM-dF-pv4" firstAttribute="leading" secondItem="uX3-py-KDZ" secondAttribute="leading" id="d7V-70-JQj"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="TwM-dF-pv4" secondAttribute="trailing" id="QKB-JL-Mou"/>
-                                                <constraint firstItem="TwM-dF-pv4" firstAttribute="leading" secondItem="uX3-py-KDZ" secondAttribute="leading" id="d7V-70-JQj"/>
+                                                <constraint firstAttribute="bottom" secondItem="uX3-py-KDZ" secondAttribute="bottom" constant="20" id="2da-lf-7Fe"/>
+                                                <constraint firstItem="uX3-py-KDZ" firstAttribute="top" secondItem="Jpu-OW-Udi" secondAttribute="top" constant="20" id="7Cv-ro-7OQ"/>
+                                                <constraint firstItem="uX3-py-KDZ" firstAttribute="leading" secondItem="Jpu-OW-Udi" secondAttribute="leading" constant="20" id="9FJ-nO-fVU"/>
+                                                <constraint firstAttribute="trailing" secondItem="uX3-py-KDZ" secondAttribute="trailing" constant="20" id="cg1-xc-KtK"/>
                                             </constraints>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="uX3-py-KDZ" secondAttribute="bottom" constant="20" id="2da-lf-7Fe"/>
-                                        <constraint firstItem="uX3-py-KDZ" firstAttribute="top" secondItem="Jpu-OW-Udi" secondAttribute="top" constant="20" id="7Cv-ro-7OQ"/>
-                                        <constraint firstItem="uX3-py-KDZ" firstAttribute="leading" secondItem="Jpu-OW-Udi" secondAttribute="leading" constant="20" id="9FJ-nO-fVU"/>
-                                        <constraint firstAttribute="trailing" secondItem="uX3-py-KDZ" secondAttribute="trailing" constant="20" id="cg1-xc-KtK"/>
-                                    </constraints>
-                                </view>
+                                        </view>
+                                        <blurEffect style="regular"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="R3g-wT-MDM"/>
-                                    <constraint firstAttribute="height" constant="140" id="j00-OJ-Ciy"/>
+                                    <constraint firstAttribute="height" constant="120" id="FnA-I7-ESL"/>
+                                    <constraint firstAttribute="width" constant="240" id="WPX-W1-RyQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ERT-g3-VRp" secondAttribute="trailing" id="eoq-j5-DcO"/>
+                                    <constraint firstAttribute="bottom" secondItem="ERT-g3-VRp" secondAttribute="bottom" id="fMB-nw-Nkg"/>
+                                    <constraint firstItem="ERT-g3-VRp" firstAttribute="leading" secondItem="vG1-73-FNK" secondAttribute="leading" id="tAb-6X-YDm"/>
+                                    <constraint firstItem="ERT-g3-VRp" firstAttribute="top" secondItem="vG1-73-FNK" secondAttribute="top" id="zwT-zD-kfx"/>
                                 </constraints>
-                                <blurEffect style="regular"/>
-                            </visualEffectView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="ERT-g3-VRp" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2u3-bU-lPD"/>
-                            <constraint firstItem="ERT-g3-VRp" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ZN8-PD-awD"/>
+                            <constraint firstItem="vG1-73-FNK" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="eIg-dp-zmX"/>
+                            <constraint firstItem="vG1-73-FNK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="y9y-Jf-QDy"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="vG1-73-FNK" id="Y4H-io-Uav"/>
                         <outlet property="messageLabel" destination="d3A-UD-m9v" id="4iV-h0-ARr"/>
                         <outlet property="okButton" destination="TwM-dF-pv4" id="uRx-cp-yQy"/>
                     </connections>
@@ -75,8 +89,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

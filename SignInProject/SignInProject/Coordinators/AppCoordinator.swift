@@ -33,6 +33,9 @@ class AppCoordinator: BaseCoordinator<Void> {
             self?.pushSignUpScreen()
         }).disposed(by: disposeBag)
         
+        viewModel.messageSentSubject.subscribe(onNext: { [weak self] _ in
+            self?.presentMessageSentScreen()
+        }).disposed(by: disposeBag)
         
         navigationController.viewControllers = [viewController]
         window.rootViewController = navigationController
@@ -71,5 +74,15 @@ class AppCoordinator: BaseCoordinator<Void> {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    
+    private func presentMessageSentScreen() {
+        let viewModel = MessageSentViewModel(message: "Message sent")
+        let viewController = MessageSentViewController.instantiate(with: viewModel)
+        
+        viewModel.dismissSubject.subscribe(onNext: { _ in
+            viewController.dismiss(animated: true)
+        }).disposed(by: disposeBag)
+        
+        viewController.modalPresentationStyle = .overCurrentContext // overFullScreen
+        navigationController.present(viewController, animated: true)
+    }
 }

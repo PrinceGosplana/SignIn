@@ -19,10 +19,10 @@ class AppCoordinator: BaseCoordinator<Void> {
     }
     
     func startApp() {
-        self.presentLoginScreen()
+        self.pushLoginScreen()
     }
     
-    private func presentLoginScreen() {
+    private func pushLoginScreen() {
         let timeBasedModel = TimeBasedModel()
         let networkStateMachine = NetworkStateMaсhine()
         let viewModel = LogInViewModel(timeBasedModel: timeBasedModel, networkStateMachine: networkStateMachine)
@@ -30,7 +30,7 @@ class AppCoordinator: BaseCoordinator<Void> {
         
         viewModel.navigationForwardSubject.subscribe(onNext: { [weak self] _ in
             timeBasedModel.stopTimer()
-            self?.presentSignUpScreen()
+            self?.pushSignUpScreen()
         }).disposed(by: disposeBag)
         
         
@@ -39,7 +39,7 @@ class AppCoordinator: BaseCoordinator<Void> {
         window.makeKeyAndVisible()
     }
     
-    private func presentSignUpScreen() {
+    private func pushSignUpScreen() {
         let timeBasedModel = TimeBasedModel()
         let networkStateMachine = NetworkStateMaсhine()
         let viewModel = SignUpViewModel(timeBasedModel: timeBasedModel, networkStateMachine: networkStateMachine)
@@ -47,7 +47,7 @@ class AppCoordinator: BaseCoordinator<Void> {
         
         viewModel.navigationForwardSubject.subscribe(onNext: { [weak self] _ in
             timeBasedModel.stopTimer()
-            self?.presentForgotPasswordScreen()
+            self?.pushForgotPasswordScreen()
         }).disposed(by: disposeBag)
         
         viewModel.navigationBackSubject.subscribe(onNext: { [weak self] _ in
@@ -57,7 +57,7 @@ class AppCoordinator: BaseCoordinator<Void> {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    private func presentForgotPasswordScreen() {
+    private func pushForgotPasswordScreen() {
         let timeBasedModel = TimeBasedModel()
         let networkStateMachine = NetworkStateMaсhine()
         let viewModel = ForgotPasswordViewModel(timeBasedModel: timeBasedModel, networkStateMachine: networkStateMachine)
@@ -70,5 +70,6 @@ class AppCoordinator: BaseCoordinator<Void> {
         
         navigationController.pushViewController(viewController, animated: true)
     }
+    
     
 }

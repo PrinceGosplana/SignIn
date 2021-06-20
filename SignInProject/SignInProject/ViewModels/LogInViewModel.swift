@@ -18,6 +18,7 @@ final class LogInViewModel {
     private let networkStateMachine: NetworkStateMaсhine
     private let disposeBag = DisposeBag()
     private let arrayOfIDs =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    private var timerIDs: Timer?
     
     init(timeBasedModel: TimeBasedModel, networkStateMachine: NetworkStateMaсhine) {
         self.timeBasedModel = timeBasedModel
@@ -42,21 +43,21 @@ final class LogInViewModel {
     
     private func performWith(_ index: Int, array: [Int]) {
         if index < array.count {
-                        Timer.scheduledTimer(withTimeInterval: Double(array[index]), repeats: false) { [weak self] timer in
-                            print("Prints its ID = \(array[index]) to the console at the end of the execution")
-                            self?.performWith(index , array: array)
-                        }
+            timerIDs = Timer.scheduledTimer(withTimeInterval: Double(array[index]), repeats: false) { [weak self] timer in
+                print("Prints its ID = \(array[index]) to the console at the end of the execution")
+                self?.performWith(index + 1, array: array)
+            }
         }
+    }
+    
+    func mainTapAction() {
+        timerIDs?.invalidate()
+        timerIDs = nil
+        navigationForwardSubject.onNext(())
     }
 }
 
 extension LogInViewModel: LoginSettings {
-    
     var mainButtonTitle: String { "Log in" }
     var subButtonTitle: String { "Send Commands" }
-
-    func mainTapAction() {
-        navigationForwardSubject.onNext(())
-    }
-    
 }

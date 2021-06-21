@@ -33,14 +33,15 @@ final class SignUpViewModel {
     func startTimer() {
         timeBasedModel.startTimer()
     }
+    
+    func mainTapAction() {
+        timeBasedModel.stopTimer()
+        navigationForwardSubject.onNext(())
+    }
 }
 
 extension SignUpViewModel: LoginSettings {
     var mainButtonTitle: String { "Sign Up" }
-    
-    func mainTapAction() {
-        navigationForwardSubject.onNext(())
-    }
 }
 
 extension SignUpViewModel: BackActionProtocol {

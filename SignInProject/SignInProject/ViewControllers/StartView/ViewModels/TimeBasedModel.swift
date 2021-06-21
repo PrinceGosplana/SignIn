@@ -17,18 +17,14 @@ class TimeBasedModel {
         self.delay = delay
     }
     
-    private func invalidateTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
-    
     public func stopTimer() {
-        print("Timer stopTimer")
-        invalidateTimer()
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
     }
     
     public func startTimer() {
-        print("Timer startTimer")
         timer = Timer.scheduledTimer(withTimeInterval: delay, repeats: true) { [weak self] timer in
             guard let self = self else {
                 timer.invalidate()

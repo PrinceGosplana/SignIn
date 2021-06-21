@@ -40,6 +40,7 @@ extension ForgotPasswordViewModel: LoginSettings {
 
 extension ForgotPasswordViewModel: BackActionProtocol {
     func backPressed() {
+        timeBasedModel.stopTimer()
         navigationBackSubject.onNext(())
     }
 }

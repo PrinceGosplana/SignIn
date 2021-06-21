@@ -29,7 +29,6 @@ class AppCoordinator: BaseCoordinator<Void> {
         let viewController = StartViewController.instantiate(with: viewModel)
         
         viewModel.navigationForwardSubject.subscribe(onNext: { [weak self] _ in
-            timeBasedModel.stopTimer()
             self?.pushSignUpScreen()
         }).disposed(by: disposeBag)
         
@@ -49,7 +48,7 @@ class AppCoordinator: BaseCoordinator<Void> {
         let viewController = StartViewController.instantiate(with: viewModel)
         
         viewModel.navigationForwardSubject.subscribe(onNext: { [weak self] _ in
-            timeBasedModel.stopTimer()
+            
             self?.pushForgotPasswordScreen()
         }).disposed(by: disposeBag)
         
@@ -67,7 +66,6 @@ class AppCoordinator: BaseCoordinator<Void> {
         let viewController = StartViewController.instantiate(with: viewModel)
         
         viewModel.navigationBackSubject.subscribe(onNext: { [weak self] _ in
-            timeBasedModel.stopTimer()
             self?.navigationController.popViewController(animated: true)
         }).disposed(by: disposeBag)
         

@@ -47,6 +47,7 @@ final class LogInViewModel {
     
     func mainTapAction() {
         invalidateIDsTimer()
+        timeBasedModel.stopTimer()
         navigationForwardSubject.onNext(())
     }
     

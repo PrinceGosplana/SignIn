@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-class TimeBasedModel {
+final class TimeBasedModel {
     private var delay: Double
     private var timer: Timer?
     public var timerSubject = PublishSubject<Int>()

@@ -46,6 +46,7 @@ extension SignUpViewModel: LoginSettings {
 
 extension SignUpViewModel: BackActionProtocol {
     func backPressed() {
+        timeBasedModel.stopTimer()
         navigationBackSubject.onNext(())
     }
 }

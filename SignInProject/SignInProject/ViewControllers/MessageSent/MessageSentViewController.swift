@@ -15,7 +15,7 @@ private extension CGFloat {
     static let fontSize: CGFloat = 16.0
 }
 
-class MessageSentViewController: MVVMViewController {
+final class MessageSentViewController: MVVMViewController {
     
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet private weak var okButton: UIButton!

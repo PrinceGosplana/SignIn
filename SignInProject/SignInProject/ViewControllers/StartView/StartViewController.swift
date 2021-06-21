@@ -19,7 +19,7 @@ extension CGFloat {
     static let springVelocity: CGFloat = 5.0
 }
 
-class StartViewController: MVVMViewController {
+final class StartViewController: MVVMViewController {
     
     typealias ViewModel = LoginSettings
     var viewModel: ViewModel?

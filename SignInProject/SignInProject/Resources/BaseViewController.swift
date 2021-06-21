@@ -10,14 +10,12 @@ import RxSwift
 
 class BaseViewController: UIViewController {
     
-    var screenName: String = ""
-    private let disposeBag = DisposeBag()
+    public let disposeBag = DisposeBag()
     private var shouldCurrentlyHideStatusBar = false
     private var shouldScreenAutorotate = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        screenName = NSStringFromClass(type(of: self))
     }
     
     override func viewWillAppear(_ animated: Bool) {

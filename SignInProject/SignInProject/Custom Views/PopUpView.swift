@@ -31,11 +31,7 @@ final class PopUpView: UIView {
         networkState = state
         updateState()
     }
-//    var networkState: NetworkStateMaсhine.State = .connecting {
-//        didSet {
-//            updateState()
-//        }
-//    }
+
     
     // MARK: - Private functions
     

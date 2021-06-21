@@ -23,7 +23,6 @@ class StartViewController: MVVMViewController {
     
     typealias ViewModel = LoginSettings
     var viewModel: ViewModel?
-    private let disposeBag = DisposeBag()
     
     public var networkState = NetworkStateMaсhine.State.connecting
     

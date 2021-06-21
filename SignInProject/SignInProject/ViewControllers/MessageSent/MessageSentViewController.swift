@@ -22,7 +22,6 @@ class MessageSentViewController: MVVMViewController {
     @IBOutlet private weak var containerView: UIView!
     
     var viewModel: MessageSentViewModel?
-    private let disposeBag = DisposeBag()
     
     override func setupUI() {
         guard let viewModel = viewModel else { return }

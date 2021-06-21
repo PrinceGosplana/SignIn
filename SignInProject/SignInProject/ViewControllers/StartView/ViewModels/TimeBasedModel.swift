@@ -25,12 +25,14 @@ class TimeBasedModel {
     }
     
     public func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: delay, repeats: true) { [weak self] timer in
-            guard let self = self else {
-                timer.invalidate()
-                return
+        if timer == nil {
+            timer = Timer.scheduledTimer(withTimeInterval: delay, repeats: true) { [weak self] timer in
+                guard let self = self else {
+                    timer.invalidate()
+                    return
+                }
+                self.timerSubject.onNext((Int(self.delay)))
             }
-            self.timerSubject.onNext((Int(self.delay)))
         }
     }
 }

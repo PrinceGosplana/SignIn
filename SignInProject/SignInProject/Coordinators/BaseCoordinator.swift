@@ -15,22 +15,22 @@ class BaseCoordinator<ResultType> {
     public let disposeBag = DisposeBag()
     private let identifier = UUID()
     private var childCoordinators = [UUID: Any]()
-  
-   
+    
+    
     private func store<T>(coordinator: BaseCoordinator<T>) {
-      childCoordinators[coordinator.identifier] = coordinator
+        childCoordinators[coordinator.identifier] = coordinator
     }
     
     private func free<T>(coordinator: BaseCoordinator<T>) {
-      childCoordinators[coordinator.identifier] = nil
+        childCoordinators[coordinator.identifier] = nil
     }
     
     public func coordinate<T>(to coordinator: BaseCoordinator<T>) -> Observable<T> {
         store(coordinator: coordinator)
-      
+        
         return coordinator.start()
             .do(onNext: { [weak self, weak coordinator] _ in
-              guard let self = self, let coordinator = coordinator else { return }
+                guard let self = self, let coordinator = coordinator else { return }
                 self.free(coordinator: coordinator)
             })
     }

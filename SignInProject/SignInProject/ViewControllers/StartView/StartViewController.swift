@@ -28,7 +28,7 @@ final class StartViewController: MVVMViewController {
     
     @IBOutlet private var navigationButton: UIButton!
     @IBOutlet private var optionalButton: UIButton!
-    @IBOutlet private weak var popUpView: PopUpView?
+    @IBOutlet private var popUpView: PopUpView!
     
     @IBAction func navigationForward() {
         viewModel?.mainTapAction()
@@ -56,10 +56,9 @@ final class StartViewController: MVVMViewController {
         viewModel.emitNetworkState.subscribe(onNext: { [weak self] state in
             guard let self = self else { return }
             self.networkState = state
-            self.popUpView?.updateWithState(self.networkState)
+            self.popUpView.updateWithState(self.networkState)
             self.showPopUp()
         }).disposed(by: disposeBag)
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +68,7 @@ final class StartViewController: MVVMViewController {
     
     private func showPopUp() {
         UIView.animate(withDuration: .animationDelay, delay: 0, usingSpringWithDamping: .springWithDamping, initialSpringVelocity: .springVelocity, options: .curveEaseInOut,  animations: { [weak self] in
-            self?.popUpView?.transform = CGAffineTransform(translationX: 0, y: .yOffset)
+            self?.popUpView.transform = CGAffineTransform(translationX: 0, y: .yOffset)
         }) { _ in
             self.hidePopUp()
         }

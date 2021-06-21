@@ -27,5 +27,5 @@ final class NetworkStateMaсhine {
         }
         stateChangedSubject.onNext(state)
     }
-
+    
 }

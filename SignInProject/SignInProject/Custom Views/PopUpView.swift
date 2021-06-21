@@ -26,12 +26,11 @@ final class PopUpView: UIView {
         super.awakeFromNib()
         customInit()
     }
-        
+    
     public func updateWithState(_ state: NetworkStateMaсhine.State) {
         networkState = state
         updateState()
     }
-
     
     // MARK: - Private functions
     
